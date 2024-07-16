@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-16T10:43:33.231897" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Incorreto" source="c:\Users\lucas\Desktop\Projetos\curso_robot\login_incorreto.robot">
+<test id="s1-t1" name="Verificar se quando um campo obrigatório não for preenchido corretamente o sistema exibe uma mensagem de campo obrigatório" line="13">
+<kw name="Dado que acesse o Swag Labs" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-16T10:43:33.633753" level="INFO">Opening browser ' chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>browser= chrome</arg>
+<arg>url=https://www.saucedemo.com</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-16T10:43:33.633753" elapsed="5.311849"/>
+</kw>
+<status status="PASS" start="2024-07-16T10:43:33.633753" elapsed="5.311849"/>
+</kw>
+<kw name="Dado que clique no botão de login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-16T10:43:38.953600" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-16T10:43:38.953600" elapsed="0.176291"/>
+</kw>
+<status status="PASS" start="2024-07-16T10:43:38.953600" elapsed="0.184295"/>
+</kw>
+<kw name="Então o navegador deve apresentar mensagem de campo obrigatório">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-16T10:43:39.202550" level="INFO">Element 'css=div.error-message-container' is displayed.</msg>
+<arg>${Username Required Message Locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-16T10:43:39.137895" elapsed="0.064655"/>
+</kw>
+<status status="PASS" start="2024-07-16T10:43:39.137895" elapsed="0.064655"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-16T10:43:39.202550" elapsed="2.306810"/>
+</kw>
+<status status="PASS" start="2024-07-16T10:43:39.202550" elapsed="2.306810"/>
+</kw>
+<status status="PASS" start="2024-07-16T10:43:33.625740" elapsed="7.885228"/>
+</test>
+<status status="PASS" start="2024-07-16T10:43:33.240002" elapsed="8.275622"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Incorreto">Login Incorreto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
